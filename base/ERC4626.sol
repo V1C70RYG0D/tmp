@@ -6,7 +6,7 @@
 // ####################################################
 // NOTE fija Finance: ETH native compatibility -- Forked OZ contract and updated deposit method to become payable.
 
-pragma solidity 0.8.10;
+pragma solidity ^0.8.10;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";

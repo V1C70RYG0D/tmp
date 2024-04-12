@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.10;
+pragma solidity ^0.8.10;
 
 import "@aave/core-v3/contracts/interfaces/IPoolDataProvider.sol";
 import "@aave/core-v3/contracts/interfaces/IAaveOracle.sol";

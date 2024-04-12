@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.10;
+pragma solidity ^0.8.10;
 
 /**
 /* @dev provides a stripped down Swapper for exactInputMulithop functionality and predefined paths

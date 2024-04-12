@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.10;
+pragma solidity ^0.8.10;
 
 import "./FijaVault.sol";
 import "../interfaces/IFijaVault2Txn.sol";

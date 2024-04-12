@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.10;
+pragma solidity ^0.8.10;
 
 interface IGmxRewardRouter {
     function feeGlpTracker() external view returns (address);

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.10;
+pragma solidity ^0.8.10;
 
 import "../../protocols/convex/interfaces/IBooster.sol";
 import "../../protocols/convex/interfaces/IApr.sol";
