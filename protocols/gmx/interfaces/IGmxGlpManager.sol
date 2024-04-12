@@ -1,0 +1,67 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.10;
+
+import "./IGmxVault.sol";
+
+interface IGmxGlpManager {
+    function glp() external view returns (address);
+
+    function usdg() external view returns (address);
+
+    function vault() external view returns (IGmxVault);
+
+    function cooldownDuration() external returns (uint256);
+
+    function getAumInUsdg(bool maximise) external view returns (uint256);
+
+    function lastAddedAt(address _account) external returns (uint256);
+
+    function addLiquidity(
+        address _token,
+        uint256 _amount,
+        uint256 _minUsdg,
+        uint256 _minGlp
+    ) external returns (uint256);
+
+    function addLiquidityForAccount(
+        address _fundingAccount,
+        address _account,
+        address _token,
+        uint256 _amount,
+        uint256 _minUsdg,
+        uint256 _minGlp
+    ) external returns (uint256);
+
+    function removeLiquidity(
+        address _tokenOut,
+        uint256 _glpAmount,
+        uint256 _minOut,
+        address _receiver
+    ) external returns (uint256);
+
+    function removeLiquidityForAccount(
+        address _account,
+        address _tokenOut,
+        uint256 _glpAmount,
+        uint256 _minOut,
+        address _receiver
+    ) external returns (uint256);
+
+    function setShortsTrackerAveragePriceWeight(
+        uint256 _shortsTrackerAveragePriceWeight
+    ) external;
+
+    function setCooldownDuration(uint256 _cooldownDuration) external;
+
+    function getPrice(bool _maximise) external view returns (uint256);
+
+    function PRICE_PRECISION() external view returns (uint256);
+
+    function USDG_DECIMALS() external view returns (uint256);
+
+    function GLP_PRECISION() external view returns (uint256);
+
+    function MAX_COOLDOWN_DURATION() external view returns (uint256);
+
+    function BASIS_POINTS_DIVISOR() external view returns (uint256);
+}
